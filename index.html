@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="exam_dod"></div>
+<div class="screen">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque porro dolorum officia recusandae laboriosam itaque neque doloribus id velit quasi incidunt, quia impedit maiores voluptatibus beatae, consequuntur assumenda, consectetur.
+</div>
+<div class="navigation">
+	<form action="#">
+		<input class="edit" type="button" value="Редагувати">
+		<input class="styles" type="button" value="Стилізувати">
+		<input class="blocked" type="button" value="Блокувати">
+	</form>
+</div>
+<div class="editor">
+	<div class="editor_text">
+		<div class="area_nav">
+			<input type="button" class="tag" value="p">
+			<input type="button" class="tag" value="h1">
+			<input type="button" class="tag" value="h2">
+			<input type="button" class="tag" value="h3">
+			<input type="button" class="tag" value="h4">
+			<input type="button" class="tag" value="h5">
+			<input type="button" class="tag" value="h6">
+			<input type="button" class="tag" value="a">
+		</div>
+		<form action="#">
+			<textarea id="area_field" cols="30" rows="10"></textarea>
+			<input type="button" class="save" value="Зберегти">
+			<input type="button" class="add" value="Додати">
+		</form>
+	</div>
+	<div class="editor_styles">
+		<form action="#">
+			<div class="wrap_font">
+				<span>Розмір шрифту</span>
+				<label for="12pt"><input type="radio" id="12pt" name="name" class="fontS" value="12pt">12px</label>
+				<label for="14pt"><input type="radio" id="14pt" name="name" class="fontS" value="14pt">14px</label>
+				<label for="16pt"><input type="radio" id="16pt" name="name" class="fontS" value="16pt">16px</label>
+				<label for="18pt"><input type="radio" id="18pt" name="name" class="fontS" value="18pt">18px</label>
+				<label for="20pt"><input type="radio" id="20pt" name="name" class="fontS" value="20pt">20px</label>
+				<label for="22pt"><input type="radio" id="22pt" name="name" class="fontS" value="22pt">22px</label>
+				<label for="24pt"><input type="radio" id="24pt" name="name" class="fontS" value="24pt">24px</label>
+			</div>
+			<div class="wrap_font">
+				<span>Шрифт</span>
+				<select id="fontF">
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Arial">Arial</option>
+					<option value="Tahoma">Tahoma</option>
+					<option value="Verdana">Verdana</option>
+				</select>	
+			</div>
+			<div class="wrap_font">
+				<span>Колір</span>
+				<div class="span_color">
+					<p>Background</p>
+					<label class="wrap_color">
+						<input class="back_color" type="button" value=" ">
+					</label>
+				</div>
+				<div class="span_color">
+					<p>Color</p>
+					<label class="wrap_color">
+						<input class="text_color" type="button" value=" ">
+					</label>
+				</div>
+			</div>
+			<div class="wrap_font">
+				<span>Стиль тексту</span>
+				<label class="wrap_check" for="t_bold">Жирний<input type="checkbox" name="tyhgg" id="t_bold"></label>
+				<label class="wrap_check" for="t_cursive">Курсив<input type="checkbox" name="hg" id="t_cursive"></label>
+				<label class="wrap_check" for="t_under">Підкреслений<input type="checkbox" name="gjh" id="t_under"></label>
+			</div>
+		</form>
+		<div id="palette_color">
+			<div style="background: red"></div>
+			<div style="background: blue"></div>
+			<div style="background: black"></div>
+			<div style="background: brown"></div>
+			<div style="background: pink"></div>
+			<div style="background: tomato"></div>
+			<div style="background: yellow"></div>
+			<div style="background: grey"></div>
+			<div style="background: orange"></div>
+		</div>
+	</div>
+</div>
+
+<div class="wrap_table_list">
+	<h2>Що додамо?</h2>
+	<div class="tabs">
+		<div class="tabs_header">
+			<div class="tab_h active_tab" data-tab = "0">Таблиця</div>
+			<div class="tab_h" data-tab = "1">Список</div>
+		</div>
+		<div class="tabs_body">
+			<div class="tab_b active">
+				<form action="#">
+					<div class="wrap_t">
+						<span>Ширина і висота комірки таблиці</span>
+						<label for="wD">Ширина
+							<input id="wD" type="number" data-tab = "0" class="widthTd valid">
+						</label>
+						<label for="hD">Висота<input id="hD" type="number" data-tab = "1" class="heightTd valid"></label>
+					</div>
+					<div class="wrap_t">
+						<span>Товщина,колір,тип лінії таблиці</span>
+						<label for="wB">Товщина<input id="wB" type="number" data-tab = "2" class="borderW valid"></label>
+						Тип лінії
+						<select id="typeLine">
+							<option value="solid">Суцільна</option>
+							<option value="dotted">Точками</option>
+							<option value="double">Подвійна</option>
+							<option value="groove">Паз</option>
+						</select>
+						<label class="span_color">
+							Колір
+							<input class="border_color" type="color">
+						</label>
+					</div>
+					<div class="wrap_t">
+						<span>Кількість рядків і стовбців</span>
+						<label for="cTr">Кількість стовбців<input id="cTr" type="number" data-tab = "3" class="countTr valid"></label>
+						<label for="cTd">Кількість рядків<input id="cTd" type="number" data-tab = "4" class="countTd valid"></label>
+					</div>
+					<input type="button" value="Додати" class="addTable" >
+				</form>
+				<div class="inputHint">Введіть число в діапазоні від 1..99</div>
+			</div>
+			<div class="tab_b">
+				<form action="#">
+					<div class="wrap_t">
+						<span>Тип списку</span>
+						<label for="num">Нумерований<input id="num" type="radio"  class="checkNumber listType" name="list"></label>
+						<label for="mar">Маркований<input id="mar" type="radio" class="checkMarker listType" name="list"></label>
+					</div>
+					<div class="wrap_t block_number_list">
+						Тип маркування OL
+						<select id="typeMark1">
+							<option value="">виберіть тип маркера</option>
+							<option value="A">A</option>
+							<option value="a">a</option>
+							<option value="I">I</option>
+							<option value="i">i</option>
+							<option value="1">1</option>
+						</select>
+					</div>
+					<div class="wrap_t block_marker_list">
+						Тип маркування UL
+						<select id="typeMark2">
+							<option value="">виберіть тип маркера</option>
+							<option value="square">square</option>
+							<option value="circle">circle</option>
+							<option value="disc">disc</option>
+						</select>
+					</div>
+					<div class="wrap_t count_li_list">
+						<label for="countL">Кількість елементів списку<input id="countL" type="text"  class="countLi"></label>
+					</div>
+					<input type="button" class="addList" value="Додати">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="watch">
+		<form action="#">
+			<input type="button" value="Подивитись на приклад" class="watchExam watchT">
+			<input type="button" value="Подивитись на приклад" class="watchExam watchL">
+		</form>
+	</div>
+
+	<div class="openExam">
+		<img src="img/btn.png" alt="btn">
+		<p>Показати приклад</p>
+	</div>
+	<div class="exam">
+		<div class="exam_topline">
+			<div class="exam_btn"></div>
+		</div>
+		<div class="exam_text"></div>
+	</div>
+</div>
+
+
+<div class="blocked_popup">
+	<div class="popup_block">
+		<h1>Програму заблоковано.Введіть пароль</h1>
+		<form action="#">
+			<input type="password" class="popup_pass">
+			<label class="demo_text"></label>
+			<input class="validate" type="button" value="Розблокувати">
+		</form>
+	</div>
+</div>
+
+
+	<script src="js/main.js">
+		
+	</script> 
+</body>
+</html>
